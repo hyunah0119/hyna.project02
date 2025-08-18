@@ -1,0 +1,82 @@
+@forward './font';
+@forward './reset';
+@forward './variable';
+
+:root {
+    font-family: 'fm-light', sans-serif;
+    color: #333;
+}
+
+/* margin */
+.m {
+    @for $num from 1 to 150 {
+        &-#{$num} {
+            margin: #{$num}px;
+        }
+
+        &t-#{$num} {
+            margin-top: #{$num}px;
+        }
+
+        &b-#{$num} {
+            margin-bottom: #{$num}px;
+        }
+
+        &r-#{$num} {
+            margin-right: #{$num}px;
+        }
+
+        &l-#{$num} {
+            margin-left: #{$num}px;
+        }
+    }
+}
+
+/* padding */
+.p {
+    @for $num from 1 to 150 {
+        &-#{$num} {
+            padding: #{$num}px;
+        }
+
+        &t-#{$num} {
+            padding-top: #{$num}px;
+        }
+
+        &b-#{$num} {
+            padding-bottom: #{$num}px;
+        }
+
+        &r-#{$num} {
+            padding-right: #{$num}px;
+        }
+
+        &l-#{$num} {
+            padding-left: #{$num}px;
+        }
+    }
+}
+
+/* line-height */
+.line-height {
+    @for $i from 0 to 5 {
+        &-#{$i} {
+            line-height: #{$i};
+        }
+    }
+}
+
+/* 텍스트 숨김 */
+.hide-txt {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    font-size: 1px;
+    line-height: 0;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}

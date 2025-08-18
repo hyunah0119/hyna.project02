@@ -1,0 +1,54 @@
+@use './styles/common.scss' as *;
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px 80px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    h1 {
+        text-align: center;
+        font-family: $m;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+
+    section {
+        margin-top: 80px;
+
+        .title {
+            font-size: 15px;
+            font-family: $r;
+            font-weight: 700;
+            border-bottom: 2px solid #eee;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        article {
+            background-color: #fafafa;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        h5 {
+            font-size: 14px;
+            font-family: $r;
+            font-weight: 500;
+        }
+
+        .box {
+            + .box {
+                margin-top: 15px;
+            }
+
+            button {
+            + button {
+                margin-left: 15px;
+            }
+        }
+        }
+    }
+}
