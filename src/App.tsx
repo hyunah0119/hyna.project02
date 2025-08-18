@@ -16,8 +16,6 @@ function App() {
     { id: 'a3', header: '03 예시', content: <p>3번 예시</p> },
   ];
 
-  const [tab, setTab] = useState("guide");
-
   return (
     <div className='wrap'>
       <h1>UI Components</h1>
