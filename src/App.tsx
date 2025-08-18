@@ -3,21 +3,12 @@ import './App.scss'
 
 import Button from './component/Button/Button'
 import Modal from './component/Modal/Modal'
-import Tabs, { type TabItem } from './component/Tab/Tabs'
 import Accordion, { type AccordionItem } from './component/Accordion/Accordion'
 import Tooltip from './component/Tooltip/Tooltip'
 
 
 function App() {
   const [open, setOpen] = useState(false);
-
-  /*
-  const tabItems: TabItem[] = [
-    { value: "guide", label: "가이드", content: <p>컴포넌트 사용 가이드입니다.</p> },
-    { value: "examples", label: "예시", content: <Button>예시 버튼</Button> },
-    { value: "notes", label: "비고", content: <p>추가 메모 영역</p> },
-  ];
-  */
 
   const accItems: AccordionItem[] = [
     { id: 'a1', header: '01 예시', content: <p>1번 예시</p> },
@@ -91,15 +82,6 @@ function App() {
           </div>
         </Modal>
       </section>
-      
-      {/* Tabs */}
-      {/*
-      <section>
-        <h3 className='title'>## Tabs</h3>
-
-        <Tabs tabs={tabItems} value={tab} onValueChange={setTab} />
-      </section>
-      */}
 
       {/* Accordion */}
       <section>
