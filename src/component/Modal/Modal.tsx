@@ -119,18 +119,17 @@ export default function Modal({
         aria-labelledby={titleId}
         onClick={(e) => e.stopPropagation()} // 내부 클릭은 전파 막기
       >
-        {(title || onClose) && (
-          <Header>
-            {title && <h3 id={titleId}>{title}</h3>}
-            <CloseBtn
-              type="button"
-              aria-label="모달 닫기"
-              onClick={onClose}
-            >
-              ✕
-            </CloseBtn>
-          </Header>
-        )}
+        <Header>
+          {title && <h3 id={titleId}>{title}</h3>}
+          <CloseBtn
+            type="button"
+            aria-label="모달 닫기"
+            onClick={onClose}
+          >
+            ✕
+          </CloseBtn>
+        </Header>
+
 
         <Content
           ref={contentRef}
